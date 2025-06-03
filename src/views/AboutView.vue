@@ -30,7 +30,7 @@ export default {
           name: 'GitHub',
           value: '@Idoo0oo',
           icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
-          link: 'https://github.com/Idoo0o0'
+          link: 'https://github.com/Idoo0oo'
         }
       ],
       tech: [
@@ -132,11 +132,38 @@ export default {
           imageUrl: 'https://cdn-icons-png.flaticon.com/512/5968/5968313.png',
           status: 'Database'
         },
+      ],
+      // Data untuk section pacar
+      girlfriend: {
+        name: 'Bellaaaa',
+        nickname: 'Bellskiee',
+        photo: 'https://raw.githubusercontent.com/Idoo0oo/portofolio-ido/main/src/assets/img/bellskie.jpg',
+        anniversary: '30 Desember 2024',
+        daysTogether: 200,
+        profession: 'Matcha Loverrr',
+        hobbies: ['Ngambek', 'Yapping', 'Matcha', 'Moodswing'],
+        description: 'The woman who inspires me every day to be a better person. She brings colors to my black and white code.',
+        quote: '"Behind every great developer is a woman who believes in him ❤️"',
+        socialMedia: [
+          {
+            name: 'Instagram',
+            icon: 'https://cdn-icons-png.flaticon.com/512/174/174855.png',
+            link: 'https://instagram.com/anssdfzh',
+            handle: '@anssdfzh'
+          }
+        ]
+      },
+      loveStats: [
+        { label: 'Days Together', value: '200+', icon: '📅' },
+        { label: 'Coffee Dates', value: '15+', icon: '☕' },
+        { label: 'Ngambek', value: '999+', icon: '😤' },
+        { label: 'Yapping', value: '999+', icon: '📢' }
       ]
     };
   }
 }
 </script>
+
 <template>
   <!-- About Me Section -->
   <div
@@ -171,6 +198,118 @@ export default {
             My goal is to convey your message and identity in the most creative way. If you are interested in hiring me,
             please contact the listed contact.
           </p>
+        </div>
+      </section>
+    </article>
+  </div>
+
+  <!-- My Heart Section (Pacar) -->
+  <div
+    class="bg-gradient-to-br from-[#1e1e1f] via-[#2a1e2a] to-[#1e1e1f] px-5 py-5 md:px-12 md:py-10 text-left border border-[#ff69b4] rounded-3xl text-amber-50 mx-3 mb-5 relative overflow-hidden">
+    <!-- Floating Hearts Animation -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="floating-heart" style="left: 10%; animation-delay: 0s;">💖</div>
+      <div class="floating-heart" style="left: 20%; animation-delay: 2s;">💕</div>
+      <div class="floating-heart" style="left: 80%; animation-delay: 4s;">💝</div>
+      <div class="floating-heart" style="left: 90%; animation-delay: 1s;">💗</div>
+    </div>
+
+    <article data-page="love" class="relative z-10">
+      <header>
+        <div class="text-2xl font-bold text-white mb-5 fadein-bot title-section flex items-center">
+          My Heart ❤️ &nbsp;
+          <div class="h-[1px] w-32 bg-gradient-to-r from-[#ff69b4] to-[#70dbff] md:w-80 aos-init aos-animate" data-aos="zoom-in-left"
+            data-aos-duration="600"></div>
+        </div>
+      </header>
+
+      <section class="text-sm md:text-lg">
+        <!-- Main Love Section -->
+        <div class="flex flex-col gap-6 md:flex-row md:gap-8 md:items-center mb-8">
+          <!-- Photo -->
+          <div class="flex justify-center md:w-5/12">
+            <div class="relative">
+              <div class="absolute -inset-4 bg-gradient-to-r from-[#ff69b4] via-[#70dbff] to-[#ff69b4] rounded-full blur opacity-75 animate-pulse"></div>
+              <img class="relative w-80 h-80 object-cover rounded-full mb-3 fadein-up border-4 border-white/20 shadow-2xl"
+                :src="girlfriend.photo" :alt="girlfriend.name">
+              <div class="absolute bottom-4 right-4 bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl animate-bounce">
+                ❤️
+              </div>
+            </div>
+          </div>
+          
+          <!-- Info -->
+          <div class="md:w-7/12">
+            <div class="mb-6 fadein-left fadeins-1">
+              <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff69b4] to-[#70dbff] mb-2">
+                {{ girlfriend.name }}
+              </h3>
+              <p class="text-lg text-[#ff69b4] font-semibold mb-1">{{ girlfriend.nickname }} 💕</p>
+              <p class="text-white/80 mb-4">{{ girlfriend.profession }}</p>
+              <div class="flex items-center gap-4 text-sm text-white/60 mb-4">
+                <span>👫 Since {{ girlfriend.anniversary }}</span>
+                <span>•</span>
+                <span>⏰ {{ girlfriend.daysTogether }} days together</span>
+              </div>
+            </div>
+            
+            <p class="mb-6 text-justify fadein-left fadeins-2 text-white/90 leading-relaxed">
+              &nbsp; &nbsp; &nbsp; {{ girlfriend.description }}
+            </p>
+            
+            <div class="bg-white/5 border-l-4 border-[#ff69b4] p-4 rounded-r-lg mb-6 fadein-left fadeins-3">
+              <p class="italic text-[#ff69b4] text-center">{{ girlfriend.quote }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Love Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 fadein-left fadeins-4">
+          <div v-for="stat in loveStats" :key="stat.label" 
+               class="bg-white/5 border border-[#ff69b4]/30 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300 group">
+            <div class="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">{{ stat.icon }}</div>
+            <div class="text-2xl font-bold text-[#ff69b4] mb-1">{{ stat.value }}</div>
+            <div class="text-xs text-white/60">{{ stat.label }}</div>
+          </div>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="mb-8 fadein-left fadeins-5">
+          <h4 class="text-xl font-semibold text-white mb-4 flex items-center">
+            <span class="mr-2">🌟</span> Her Interests
+          </h4>
+          <div class="flex flex-wrap gap-3">
+            <span v-for="hobby in girlfriend.hobbies" :key="hobby"
+                  class="px-4 py-2 bg-gradient-to-r from-[#ff69b4]/20 to-[#70dbff]/20 border border-[#ff69b4]/30 rounded-full text-sm text-white hover:from-[#ff69b4]/30 hover:to-[#70dbff]/30 transition-all duration-300 cursor-pointer">
+              {{ hobby }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="fadein-left fadeins-6">
+          <h4 class="text-xl font-semibold text-white mb-4 flex items-center">
+            <span class="mr-2">🔗</span> Connect with Her
+          </h4>
+          <div class="flex gap-4">
+            <a v-for="social in girlfriend.socialMedia" :key="social.name"
+               :href="social.link" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-3 bg-white/5 border border-[#ff69b4]/30 rounded-xl px-4 py-3 hover:bg-[#ff69b4]/10 transition-all duration-300 group">
+              <img :src="social.icon" :alt="social.name" class="w-6 h-6 group-hover:scale-110 transition-transform duration-300">
+              <div>
+                <div class="text-white font-medium text-sm">{{ social.name }}</div>
+                <div class="text-[#ff69b4] text-xs">{{ social.handle }}</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Love Note -->
+        <div class="mt-8 text-center bg-gradient-to-r from-[#ff69b4]/10 to-[#70dbff]/10 border border-[#ff69b4]/20 rounded-2xl p-6 fadein-left fadeins-7">
+          <p class="text-white/80 text-lg font-light italic mb-4">
+            "Professional yapping listener: Udah level expert ngangguk di waktu yang tepat ❤️"
+          </p>
+          <div class="text-[#ff69b4] font-semibold">— Ido 2024 —</div>
         </div>
       </section>
     </article>
@@ -350,6 +489,18 @@ export default {
   animation-delay: 1400ms;
 }
 
+.fadeins-5 {
+  animation-delay: 1700ms;
+}
+
+.fadeins-6 {
+  animation-delay: 2000ms;
+}
+
+.fadeins-7 {
+  animation-delay: 2300ms;
+}
+
 .img-tech,
 .tech {
   transition: transform 0.3s ease;
@@ -373,5 +524,63 @@ export default {
 
 .contact-item:hover .contact-icon {
   transform: scale(1.2);
+}
+
+/* Romantic Animations */
+.floating-heart {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: floatHeart 6s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatHeart {
+  0%, 100% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* Gradient text animation */
+.gradient-text {
+  background: linear-gradient(-45deg, #ff69b4, #70dbff, #ff69b4, #70dbff);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Pulse effect for love stats */
+.love-stat:hover {
+  animation: lovePulse 0.6s ease-in-out;
+}
+
+@keyframes lovePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>
