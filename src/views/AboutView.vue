@@ -137,7 +137,7 @@ export default {
       girlfriend: {
         name: 'Bellaaaa',
         nickname: 'Bellskiee',
-        photo: 'https://raw.githubusercontent.com/Idoo0oo/portofolio-ido/main/src/assets/img/bellskie.jpg',
+        photo: 'https://github.com/Idoo0oo/foto-bellskie/blob/main/bellskie.jpg?raw=true',
         anniversary: '30 Desember 2024',
         daysTogether: 200,
         profession: 'Matcha Loverrr',
