@@ -16,21 +16,21 @@ export default {
           name: 'WhatsApp',
           value: '+62 838-3753-4805',
           icon: 'https://cdn-icons-png.flaticon.com/512/733/733585.png',
-          link: 'https://wa.me/6281234567890'
+          link: 'https://wa.me/6283837534805'
         },
         {
           id: 3,
           name: 'LinkedIn',
           value: 'Muhammad Ditto Alfiansyah',
           icon: 'https://cdn-icons-png.flaticon.com/512/174/174857.png',
-          link: 'https://linkedin.com/in/ditto-alfiansyah'
+          link: 'https://linkedin.com/in/muhammad-ditto'
         },
         {
           id: 4,
           name: 'GitHub',
           value: '@Idoo0oo',
           icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
-          link: 'https://github.com/dittoalfiansyah'
+          link: 'https://github.com/Idoo0o0'
         }
       ],
       tech: [

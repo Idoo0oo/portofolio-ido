@@ -10,8 +10,8 @@ export default {
           imageUrl: 'landingpage',
           status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
           tech: 'Html, Css, Javascript',
-          github: 'https://github.com/Idoo0oo',
-          demo: 'https://paellajaa.github.io/muhammad-ditto/'
+          github: 'null',
+          demo: 'null'
         },
         {
           id: 2,
@@ -19,8 +19,8 @@ export default {
           imageUrl: 'laravel',
           status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
           tech: 'Laravel 11, Bootstrap',
-          github: 'https://github.com/Idoo0oo',
-          demo: 'https://github.com/Idoo0oo/CRUD-Laravel'
+          github: 'null',
+          demo: 'null'
         },
         {
           id: 3,
